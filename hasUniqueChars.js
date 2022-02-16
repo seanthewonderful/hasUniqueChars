@@ -1,12 +1,14 @@
 // Write your code below
-const array = Array
-  .from(document.querySelectorAll('[id]'))
-  .map(function(e) {
-      return e.id
-  });
+function hasUniqueChars(word){
+    let array = Array.from(word)
+    let mySet = new Set(word)
+    return array.length === mySet.size
+    //if(array.length === mySet.size){
+    //     return true
+    // }else {
+    //     return false
+    }   
+console.log(hasUniqueChars("Monday"))
 
-const set = new Set(array);
-console.assert(set.size == array.length)
 
-
-hasUniqueChars("") // will print true or false
+//hasUniqueChars("") // will print true or false
